@@ -49,3 +49,9 @@ for email in emailMatches:
 if len(allMatches) > 0:
     result = '\n'.join(allMatches)
     pyperclip.copy(result)
+
+    print("Copied to clipboard:")
+    print(result)
+
+else:
+    print("No phone numbers or email addresses found.")
