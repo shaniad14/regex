@@ -39,3 +39,13 @@ allMatches = []
 # Add phone numbers to list
 for number in phoneMatches:
     allMatches.append(number[0])
+
+
+# Add emails to list
+for email in emailMatches:
+    allMatches.append(email[0])
+
+# Copy results back to clipboard
+if len(allMatches) > 0:
+    result = '\n'.join(allMatches)
+    pyperclip.copy(result)
