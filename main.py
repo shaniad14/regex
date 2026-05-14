@@ -28,3 +28,14 @@ emailRegex = re.compile(r'''
     \.[a-zA-Z]{2,}          # .com .ca .org etc.
 )
 ''', re.VERBOSE)
+
+# Find all matches
+phoneMatches = phoneRegex.findall(text)
+emailMatches = emailRegex.findall(text)
+
+# Store final results
+allMatches = []
+
+# Add phone numbers to list
+for number in phoneMatches:
+    allMatches.append(number[0])
